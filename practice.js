@@ -219,8 +219,20 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem() --> [];
 */
 
+function removeItem(myGroceryList, itemToRemove){
+  if(itemToRemove && myGroceryList){
+    for(i = 0; i < myGroceryList.length; i++) {
+      if(myGroceryList[i] === itemToRemove){
+        myGroceryList.splice(i, 1)
+      }
+    }   
+  } return myGroceryList;
+}
 
-
+function addItem(myGroceryList, itemToAdd){
+  myGroceryList.push(itemToAdd);
+  return myGroceryList;
+}
 //Code Here
 
 
@@ -230,6 +242,14 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 /*
   Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 */
+
+function maker(){
+  var arr = [];
+  for(i = 1; i <= 215; i++){
+    arr.push(i);
+  }
+  return arr;
+}
 
 //Code Here
 
@@ -247,6 +267,12 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   Your output should look like this -> [15, 19, 26, 29, 35, 44, 58]
 */
   
+function addTen(numbers){
+  for(i = 0; i < numbers.length; i++) {
+    numbers[i] = +numbers[i] +10;
+  } 
+  return numbers;
+}
 //Code Here
 
 
@@ -272,6 +298,12 @@ for(var i = 0; i < num2; i++){
   Return the longer of the two arrays.
 */
 
+function longer(arr1, arr2){
+  if(arr1.length > arr2.length){
+    return arr1;
+  } return arr2;
+}
+
 //Code Here
 
 
@@ -283,6 +315,10 @@ for(var i = 0; i < num2; i++){
 
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
+
+function both(arr1, arr2) {
+  
+}
 
 //Code Here
 
