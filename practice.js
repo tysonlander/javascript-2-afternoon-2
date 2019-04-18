@@ -18,7 +18,8 @@ var arr = [10,20,30];
 */
 function first(arr){
   return arr[0];
-}
+} 
+
 
 //Code Here
 
@@ -217,6 +218,8 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   removeItem(myGroceryList) --> [];
   addItem() --> [];
 */
+
+
 
 //Code Here
 
