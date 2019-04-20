@@ -220,18 +220,25 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 function removeItem(myGroceryList, itemToRemove){
+  
   if(itemToRemove && myGroceryList){
     for(i = 0; i < myGroceryList.length; i++) {
       if(myGroceryList[i] === itemToRemove){
         myGroceryList.splice(i, 1)
+        return myGroceryList;
+      } else {
+        return myGroceryList;
       }
     }   
-  } return myGroceryList;
+  } return [];
 }
 
 function addItem(myGroceryList, itemToAdd){
-  myGroceryList.push(itemToAdd);
-  return myGroceryList;
+  if(itemToAdd && myGroceryList){
+    myGroceryList.push(itemToAdd);
+    return myGroceryList;
+  } return [];
+  
 }
 //Code Here
 
@@ -317,7 +324,15 @@ function longer(arr1, arr2){
 */
 
 function both(arr1, arr2) {
-  
+  var newArray = [];
+  for(i = 0; i < arr1.length; i++){
+    for(k = 0; k < arr2.length; k++) {
+      if(arr1[i] === arr2[k]) {
+        newArray.push(arr2[k]);
+      }
+    }
+  } 
+  return newArray;
 }
 
 //Code Here
@@ -359,7 +374,8 @@ var colt = {
   Fill the devMountainEmployees array with those four objects. 
   After that console.log the length of the Array and make sure that it's equal to 4. 
 */
-
+devMountainEmployees.push(joe, cahlan, ryan, colt);
+console.log(devMountainEmployees.length);
 //Code Here
 
 
@@ -368,7 +384,12 @@ var colt = {
   Now let's say Cahlan has to take a leave of absence.
   Loop through your devMountainEmployees until you find cahlan, then remove him from the array.
 */
-
+for(i = 0; i < devMountainEmployees.length; i++) {
+  if(devMountainEmployees[i].name === "Cahlan") {
+    devMountainEmployees.splice(i, 1)
+  }
+}
+console.log(devMountainEmployees);
 //Code Here
 
 
@@ -381,6 +402,8 @@ var colt = {
   Create an empty array called users.
 */
 
+
+var users = [];
 //Code Here
 
 
@@ -400,6 +423,10 @@ var user1 = {
 };
 // Do not edit the code above.
 
+users = users.push(user1, 
+  {name: 'jaoh', email: "lsnv@gmail", password: 'vnoiwne', username: 'slnvisnv'},
+  {name: 'deborah', email: "lsv@gmail", password: 'noiwne', username: 'nvisnv'}
+  )
 //Code Here
 
 
@@ -413,6 +440,14 @@ var user1 = {
   Loop through your array of objects until you find Mark's account (use his email, mark.mciver@devmounta.in, to find him).
   Once you find the array index he's located in, delete him from the array.
 */
+
+
+for(i = 0; i < users.length; i++) {
+  if(users[i].email === "mark.mciver@devmounta.in"){
+    users.splice(i, 1);
+  }
+}
+
 
 //Code Here
 
